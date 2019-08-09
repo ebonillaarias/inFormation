@@ -47,6 +47,7 @@ namespace InFormation.DAL
             List<Demo> lista = new List<Demo>();
             string nome = "Juiz de Fora";
 
+
             //if (string.IsNullOrEmpty(nome))
                 lista = _db.Query<Demo>("SELECT tx_titulo,tx_lugar FROM auditoria.tbl_actareunion;").ToList();
 
