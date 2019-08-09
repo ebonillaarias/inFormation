@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IInFormation.BLL\IInFormation.BLL.csproj" />
+    <ProjectReference Include="..\IInFormation.DAL\IInFormation.DAL.csproj" />
+    <ProjectReference Include="..\InFormation.BLL\InFormation.BLL.csproj" />
+    <ProjectReference Include="..\InFormation.DAL\InFormation.DAL.csproj" />
+    <ProjectReference Include="..\InFormation.ENT\InFormation.ENT.csproj" />
+  </ItemGroup>
+
+</Project>
