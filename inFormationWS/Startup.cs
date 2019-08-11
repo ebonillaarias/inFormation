@@ -34,8 +34,8 @@ namespace inFormationWS
             services.Configure<ReadConfig>(Configuration.GetSection("Data"));
 
             //Instance injection
-            services.AddScoped<IInFormation.BLL.IMenu, InFormation.BLL.Menu>();
-            services.AddScoped<IInFormation.DAL.IMenu, InFormation.DAL.Menu>();
+            services.AddScoped<IInFormation.BLL.IMenu_BLL, InFormation.BLL.Menu_BLL>();
+            services.AddScoped<IInFormation.DAL.IMenu_DAL, InFormation.DAL.Menu_DAL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

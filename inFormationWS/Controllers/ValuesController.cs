@@ -11,8 +11,8 @@ namespace inFormationWS.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private IMenu _menu;
-        public ValuesController(IMenu menu)
+        private IMenu_BLL _menu;
+        public ValuesController(IMenu_BLL menu)
         {
             this._menu = menu;
         }
