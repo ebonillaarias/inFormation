@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using InFormation.DAL;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,12 @@ namespace inFormation.Utility
 {
     public class HelperWebConfig
     {
-        private static IConfiguration configuration;
+        public static IOptions<ReadConfig> config;
 
-        public HelperWebConfig(IConfiguration _configuration)
+        public HelperWebConfig(IOptions<ReadConfig> _config)
         {
-            configuration = _configuration;
+            config = _config;
         }
 
-        public static string SERV_GET_EMPLOYEE = configuration.GetSection("").GetSection("").Value;
     }
 }
