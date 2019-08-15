@@ -1,0 +1,98 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <script src="~/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/Account.css">
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "frm_Main", @class = "" }))
+    {
+
+        <div class="container">
+            <div class="row2">
+                <div class="logo-check">
+                    <img src="~/Content/image/LOGO-ANTAMINA_CERO-ES-POSIBLE.png" />
+                </div>
+                <div class="login-text">
+                    <div class="user-text">
+                        <table class="width-100">
+                            <tr>
+                                <td class="text-img"><img src="~/image/usuario.png" style="height: 28px;width: 27px;" /></td>
+                                <td class="text-user">
+                                   @*@Html.TextBoxFor(m => m.USR_ID, new { @class = "input-login", @placeholder = "USUARIO" })*@
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="pass-text">
+
+                        <table class="width-100">
+                            <tr>
+                                <td class="pass-img"><img src="~/image/contraseña.png" /></td>
+                                <td class="pass-user">
+                                    @*@Html.PasswordFor(m => m.USR_PASSWORD, new { @class = "input-login", @placeholder = "CONTRASEÑA" })
+                                    @Html.HiddenFor(m => m.adm_userdevice.DEV_OS, new { @id = "device_id" })*@
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="row" style="text-align: center;">
+                        @{
+                            try
+                            {
+                                <span style="color:white;font-weight:bold">@Model.MSG_ERROR</span>
+                            }
+                            catch (Exception)
+                            {
+                                <span style="color:white;font-weight:bold"></span>
+                            }
+
+                        }
+                    </div>
+                    <div class="btn-login">
+                        <input type="submit" value="INGRESAR" class="btn-login-btn" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    }
+    <div class="franja-inf"></div>
+    <script>
+        var redirectHome = "@Url.Action("Index","Home")";
+
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
+            $("#device_id").val('iOS');
+        }
+        else if (userAgent.match(/Android/i)) {
+            $("#device_id").val('Android');
+        }
+        else {
+            $("#device_id").val(window.navigator.platform);
+        }
+
+    </script>
+
+
+</body>
+</html>
