@@ -13,5 +13,6 @@ namespace InFormation.ENT
         public string Url { get; set; }
         public string Action { get; set; }
         public string Controller { get; set; }
+
     }
 }
