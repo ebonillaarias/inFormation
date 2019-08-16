@@ -14,21 +14,15 @@ namespace inFormation.Controllers
 {
     public class HomeController : BaseController
     {
-        public static IOptions<ReadConfig> config;
+        public static IOptions<ReadConfig> config2;
 
-        public HomeController(IOptions<ReadConfig> _config)
+        public HomeController(IOptions<ReadConfig> _config2) : base(_config2)
         {
-            config = _config;
         }
 
         public IActionResult Index()
         {
-            //HelperWebConfig helper = new HelperWebConfig();
-            string urlWS = config.Value.WebService + "Menu";
-
-            List<Menu> lista = new List<Menu>();
-            lista = HelperWebService<Menu>.GetInvoke(urlWS);
-            ViewBag.ListaMenu = lista;
+            getMenu();
 
             return View();
         }
