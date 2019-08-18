@@ -10,10 +10,11 @@ namespace inFormation.Controllers
 {
     public class SearchController : BaseController
     {
-        public static IOptions<ReadConfig> config2;
+        public static IOptions<ReadConfig> config;
 
-        public SearchController(IOptions<ReadConfig> _config2) : base(_config2)
+        public SearchController(IOptions<ReadConfig> _config) : base(_config)
         {
+            
         }
 
         public IActionResult Personal()

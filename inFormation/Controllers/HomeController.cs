@@ -18,12 +18,12 @@ namespace inFormation.Controllers
 
         public HomeController(IOptions<ReadConfig> _config2) : base(_config2)
         {
+           
         }
 
         public IActionResult Index()
         {
             getMenu();
-
             return View();
         }
 
