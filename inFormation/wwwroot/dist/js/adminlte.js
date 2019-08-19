@@ -1051,7 +1051,6 @@ throw new Error('AdminLTE requires jQuery')
   Layout.prototype.fix = function () {
     // Remove overflow from .wrapper if layout-boxed exists
     $(Selector.layoutBoxed + ' > ' + Selector.wrapper).css('overflow', 'hidden');
-
     // Get window height and the wrapper height
     var footerHeight  = $(Selector.mainFooter).outerHeight() || 0;
     var headerHeight  = $(Selector.mainHeader).outerHeight() || 0;
@@ -1078,7 +1077,7 @@ throw new Error('AdminLTE requires jQuery')
       var $controlSidebar = $(Selector.controlSidebar);
       if (typeof $controlSidebar !== 'undefined') {
         if ($controlSidebar.height() > postSetHeight)
-          $(Selector.contentWrapper).css('min-height', $controlSidebar.height());
+          $(Selector.contentWrapper).css('height', '100%');
       }
     }
   };
