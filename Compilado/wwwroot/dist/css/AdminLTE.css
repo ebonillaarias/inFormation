@@ -347,7 +347,7 @@ a:focus {
 }
 .content-header {
   position: relative;
-  padding: 15px 15px 0 15px;
+  padding: 8px 15px 8px 15px;
 }
 .content-header > h1 {
   margin: 0;
@@ -360,13 +360,13 @@ a:focus {
   font-weight: 300;
 }
 .content-header > .breadcrumb {
-  float: right;
+  /*float: right;*/
   background: transparent;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 12px;
-  padding: 7px 5px;
-  position: absolute;
+  padding: 5px 5px;
+  /*position: absolute;*/
   top: 15px;
   right: 10px;
   border-radius: 2px;
@@ -1331,9 +1331,10 @@ a:focus {
 }
 /* Input group */
 .input-group .input-group-addon {
-  border-radius: 0;
-  border-color: #d2d6de;
-  background-color: #fff;
+    border-radius: 0;
+    font-weight: bold;
+    border-color: #d2d6de;
+    background-color: #dadada;
 }
 /* button groups */
 .btn-group-vertical .btn.btn-flat:first-of-type,
@@ -1764,7 +1765,7 @@ a:focus {
 .box-header {
   color: #444;
   display: block;
-  padding: 10px;
+  /*padding: 10px;*/
   position: relative;
 }
 .box-header.with-border {
