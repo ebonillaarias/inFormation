@@ -3,61 +3,62 @@
     ViewData["Title"] = "Personal";
 }
 
-<div class="row div-buscar-dni">
-    <label class="label-buscar">SOLICITAR REPORTE DE PERSONAL</label>
-    <div class="row espacio-bottom">
-        <label class="container-chk">
-            CREDITICIO
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <span class="sep-span"></span>
-        <label class="container-chk">
-            RIESGO
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-        <span class="sep-span"></span>
-        <label class="container-chk">
-            INTERPOL
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <span class="sep-span"></span>
-        <label class="container-chk">
-            RENIEC
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-4">
-            <label class="col-sm-3 col-form-label">
-                DNI
+    <div class="row div-buscar-dni">
+        <div class="box-header with-border espacio-bottom ">
+            <label class="label-buscar">SOLICITAR REPORTE DE PERSONAL</label>
+        </div>
+        @*<label class="label-buscar">SOLICITAR REPORTE DE PERSONAL</label>*@
+        <div class="row espacio-bottom">
+            <label class="container-chk">
+                CREDITICIO
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
             </label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control input-text-gris" id="t" value="email@example.com">
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <label class="col-sm-4 col-form-label">
-                Centro de Costo
+            <span class="sep-span"></span>
+            <label class="container-chk">
+                RIESGO
+                <input type="checkbox">
+                <span class="checkmark"></span>
             </label>
-            <div class="col-sm-8">
-                <select class="form-control input-text-gris">
-                    <option>Costos 1</option>
-                    <option>Costos 2</option>
-                </select>
-            </div>
+            <span class="sep-span"></span>
+            <label class="container-chk">
+                INTERPOL
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <span class="sep-span"></span>
+            <label class="container-chk">
+                RENIEC
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
         </div>
-        <div class="col-sm-4">
-            <div class="text-center">
-                <button class="btn btn-success">Consultar</button>
-                <button class="btn btn-warning">Cancelar</button>
+        <div class="form-group row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">DNI</span>
+                        <input type="text" id="txt_doc" class="form-control txt_start " >
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Centro de Costo</span>
+                        <input type="text" id="tags" class="form-control txt_start ">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-4">
+                <div class="text-center">
+                    <button class="btn btn-success">Consultar</button>
+                    <button class="btn btn-warning">Cancelar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 <br />
 
 <div class="row div-buscar-dni">
@@ -67,6 +68,37 @@
                 <label class="label-buscar">CANTIDAD DE REGISTROS: 9</label>
             </div>
             <!-- /.box-header -->
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Desde</span>
+                            <input type="text" id="txt_start" class="form-control txt_start " value="20/08/2019">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Hasta</span>
+                            <input type="text" id="txt_end" class="form-control txt_end" value="20/08/2019">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control txt_search" placeholder="Nombre, apellidos, DNI... ">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary btnSearch" type="button"><i class="fa fa-search"></i>Buscar</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="box-body">
                 <table class="table table-bordered tabla-personal">
                     <tbody>
@@ -148,3 +180,7 @@
     </div>
     <!-- /.col -->
 </div>
+
+
+
+<script src="~/js/Personal.js"></script>
