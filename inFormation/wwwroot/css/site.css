@@ -228,3 +228,26 @@ body {
     position: absolute;
     width: 1px;
 }
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .tabla-personal td:nth-child(1),
+    .tabla-personal th:nth-child(1) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .tabla-personal td:nth-child(1),
+    .tabla-personal th:nth-child(1),
+    .tabla-personal td:nth-child(4),
+    .tabla-personal th:nth-child(4),
+    .tabla-personal td:nth-child(7),
+    .tabla-personal th:nth-child(7) {
+        display: none;
+    }
+}
+	
